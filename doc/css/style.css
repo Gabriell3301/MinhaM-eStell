@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffafc;
+  background-image: linear-gradient(135deg, #fffafc 0%, #fff0f6 100%);
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #d63384;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  position: relative;
+  display: inline-block;
+}
+
+.emoji-heart {
+  display: inline-block;
+  animation: pulsar 1.5s infinite alternate;
+}
+
+@keyframes pulsar {
+  from { transform: scale(1); }
+  to { transform: scale(1.3); }
+}
+
+p {
+  font-size: 1.2em;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.mensagem-container {
+  margin: 40px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #d63384;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
+}
+
+.btn:hover, .btn:active {
+  background-color: #ad296b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(214, 51, 132, 0.4);
+}
+
+.btn-galeria {
+  background-color: #9c27b0;
+}
+
+.btn-galeria:hover, .btn-galeria:active {
+  background-color: #7b1fa2;
+}
+
+.caixa-texto {
+  background-color: #ffe6f0;
+  border-left: 6px solid #d63384;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #4a4a4a;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caixa-texto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.autor {
+  background-color: #d63384;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para a moldura da foto */
+.moldura-mae {
+  position: relative;
+  max-width: 400px;
+  margin: 60px auto 40px;
+  padding: 20px;
+  background: linear-gradient(to right, #ffb6c1, #f8bbd0, #f48fb1);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(214, 51, 132, 0.3);
+  border: 8px solid white;
+  transition: transform 0.3s ease;
+}
+
+.moldura-mae:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(214, 51, 132, 0.4);
+}
+
+.titulo-moldura {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d63384;
+  background-image: linear-gradient(to right, #d63384, #e91e63);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.2em;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.foto-mae {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.foto-mae:hover {
+  transform: scale(1.05);
+}
+
+.coração-flutuante {
+  position: fixed;
+  color: #d63384;
+  opacity: 0.4;
+  font-size: 2em;
+  animation: flutuar 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+/* Efeito fade-in para elementos */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .caixa-texto {
+    padding: 18px 15px;
+    margin: 40px auto 25px;
+    font-size: 1em;
+  }
+  
+  .titulo-moldura {
+    font-size: 1em;
+    padding: 6px 15px;
+  }
+  
+  .moldura-mae {
+    max-width: 85%;
+    padding: 15px;
+    margin: 50px auto 30px;
+  }
+  
+  .autor {
+    font-size: 0.8em;
+    padding: 4px 12px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95em;
+    display: block;
+    margin: 15px auto;
+    max-width: 80%;
+  }
+}
